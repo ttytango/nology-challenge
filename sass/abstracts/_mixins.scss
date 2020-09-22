@@ -1,0 +1,60 @@
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin respond($breakpoint) {
+    @if($breakpoint==medium) {
+        @media (max-width: 900px) {
+            @content
+        }
+    }
+    @if($breakpoint==small) {
+        @media (max-width: 600px) {
+            @content
+        }
+    }
+}
+
+@mixin heading-font {
+    font-family: 'Crimson Text', serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 2.6em;
+    letter-spacing: 0.5rem;
+    color: rgb(226, 255, 237);
+    text-shadow: 1px 2px 8px $color-primary-dark;
+    @include respond(small) {
+        // margin-top: 26em;
+        letter-spacing: 0.33rem;
+    }
+}
+
+@import "../scss/fontawesome.scss";
+@import "../scss/solid.scss";
+@import "../scss/brands.scss";
+.user {
+    @extend %fa-icon;
+    @extend .fas;
+    &:before {
+        content: fa-content($fa-var-user);
+    }
+}
+
+.twitter {
+    @extend %fa-icon;
+    @extend .fab;
+    &:before {
+        content: fa-content($fa-var-twitter);
+    }
+}

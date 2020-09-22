@@ -1,0 +1,9 @@
+.about {
+    .back-z {
+        background: linear-gradient($color-primary-light 20%, black 70%);
+        position: relative;
+        height: 75vh;
+        z-index: 20;
+        box-shadow: 1px 4px 8px $color-primary-dark;
+    }
+}

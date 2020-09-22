@@ -1,0 +1,72 @@
+.group-buttons {
+    background: linear-gradient(to left bottom, rgba(18, 84, 19, 0.2), rgba($color-secondary, 0.2));
+    display: flex;
+    box-shadow: 5px -2px 24px rgba(43, 51, 105, 0.3);
+    width: 50vh;
+    margin: 0 auto;
+    padding: 2rem 0;
+    border-radius: 8px;
+    flex-wrap: wrap;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    justify-content: center;
+  
+
+    .btn {
+        padding: 1.2rem 0.8rem;
+        margin: auto .4rem;
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+        font-size: larger;
+        &:first-of-type:hover {
+            opacity: 1;
+            box-shadow: 2px 1px 5px $color-primary-dark;
+            transform: scaleX(1.15) scaleY(1.15);
+            -webkit-transform: scaleX(1.15) scaleY(1.15);
+            -moz-transform: scaleX(1.15) scaleY(1.15);
+            -ms-transform: scaleX(1.15) scaleY(1.15);
+            -o-transform: scaleX(1.15) scaleY(1.15);
+        }
+        &:not(:first-of-type):hover {
+            opacity: 1;
+            box-shadow: -2px 1px 5px $color-primary-dark;
+            transform: scaleX(1.15) scaleY(1.15);
+            -webkit-transform: scaleX(1.15) scaleY(1.15);
+            -moz-transform: scaleX(1.15) scaleY(1.15);
+            -ms-transform: scaleX(1.15) scaleY(1.15);
+            -o-transform: scaleX(1.15) scaleY(1.15);
+        }
+        &--white {
+            background: rgba(255, 255, 255, 0.9);
+        }
+        &--animated {
+            &:first-of-type:active {
+                transform: translate(2px);
+                -webkit-transform: translate(2px);
+                -moz-transform: translate(2px);
+                -ms-transform: translate(2px);
+                -o-transform: translate(2px);
+            }
+            &:nth-of-type(2):active {
+                box-shadow: none;
+                transform: none;
+                -webkit-transform: none;
+                -moz-transform: none;
+                -ms-transform: none;
+                -o-transform: none;
+            }
+            &:nth-of-type(3):active {
+                transform: translate(-2px);
+                -webkit-transform: translate(-2px);
+                -moz-transform: translate(-2px);
+                -ms-transform: translate(-2px);
+                -o-transform: translate(-2px);
+            }
+        }
+    }
+}

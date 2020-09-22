@@ -1,0 +1,7 @@
+.footer {
+    @include clearfix;
+    margin-top: 1em;
+    padding: 5px 5px;
+    background-color: $color-tertiary;
+    color: white;
+}

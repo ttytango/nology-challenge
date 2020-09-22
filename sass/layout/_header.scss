@@ -1,0 +1,58 @@
+// .section-heading {
+//     font-weight: 700;
+//     position: relative;
+// }
+.header {
+    height: 75vh;
+    background-image: linear-gradient(to left bottom, rgba($color-primary, 0.5), rgba($color-secondary, 0.8)), url("../img/abandoned-forest-line-shrunk2.jpg");
+    background-blend-mode: hue;
+    display: block;
+    background-position: top 20% left 25%;
+    // position: inherit;
+    // -webkit-clip-path: polygon(-5vh 0, 10% -100vh, 100% 25vh, 100% 250%);
+    // -webkit-clip-path: polygon(-5% 10vh, 10% -120vh, 100% 25vh, 100% 250%, -10% -7%);
+    // clip-path: polygon(-5% 10vh, 10% -120vh, 100% 25vh, 100% 250%, -10% -7%);
+    // @include respond(small) {
+    //     -webkit-clip-path: none;
+    //     clip-path: none;
+    // }
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+    &__logo {
+        height: 3.5rem;
+        filter: brightness(2) drop-shadow(1px 2px 4px black) hue-rotate(-45deg);
+        -webkit-filter: brightness(2) drop-shadow(1px 2px 4px black) hue-rotate(-45deg);
+    }
+    &__text-box {
+        position: relative;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    &:not(:hover) {
+        filter: hue-rotate(55deg);
+        -webkit-filter: hue-rotate(55deg);
+        -webkit-backdrop-filter: hue-rotate(10deg) sepia(0.5);
+        backdrop-filter: hue-rotate(10deg) sepia(0.5);
+    }
+    &:hover {
+        filter: hue-rotate(0deg);
+        -webkit-filter: hue-rotate(0deg);
+        -webkit-backdrop-filter: hue-rotate(10deg) sepia(1);
+        backdrop-filter: hue-rotate(10deg) sepia(1);
+        transition: -webkit-backdrop-filter 0.5s ease-in;
+        transition: -webkit-backdrop-filter 0.3s ease-in;
+        transition: -webkit-backdrop-filter 1s ease-in;
+        transition: backdrop-filter 1s ease-in;
+        transition: backdrop-filter 1s ease-in, -webkit-backdrop-filter 1s ease-in;
+        //transition: backdrop-filter 0.5s ease-in, -webkit-backdrop-filter 0.5s ease-in;
+        -webkit-transition: backdrop-filter 1s ease-in, -webkit-backdrop-filter 1s ease-in;
+        -moz-transition: backdrop-filter 1s ease-in, -webkit-backdrop-filter 1s ease-in;
+        -ms-transition: backdrop-filter 1s ease-in, -webkit-backdrop-filter 1s ease-in;
+        -o-transition: backdrop-filter 1s ease-in, -webkit-backdrop-filter 1s ease-in;
+    }
+}

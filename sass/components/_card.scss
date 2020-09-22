@@ -1,0 +1,51 @@
+.card {
+    background: rgba(#eee, 0.9);
+    box-shadow: -10px 2px 15px rgba($color-secondary, 0.4);
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    margin: 15px;
+    width: 35vh;
+    font-size: 1.4rem;
+    text-align: center;
+    padding-bottom: 10px;
+    border: 1px solid $color-primary-light;
+    transform: skewX(-1deg);
+    -webkit-transform: skewX(-1deg);
+    -moz-transform: skewX(-1deg);
+    -ms-transform: skewX(-1deg);
+    -o-transform: skewX(-1deg);
+    @include respond(small) {
+        display: inline-block;
+        font-size: 1rem;
+    }
+    // img {
+    //     width: 60%;
+    //     height: 60%;
+    // }
+    &:hover {
+        transform: translate3d(20px, -10px, 20px) skewX(0deg);
+        box-shadow: -8px 8px 10px rgba($color-primary-dark, 0.8);
+        filter: opacity(1), contrast(5);
+        -webkit-filter: opacity(1), contrast(5);
+        transition: all .2s cubic-bezier(0.85, 0.734, 0.844, 0.8);
+        -webkit-transition: all .2s cubic-bezier(0.85, 0.734, 0.844, 0.8);
+        -moz-transition: all .2s cubic-bezier(0.85, 0.734, 0.844, 0.8);
+        -ms-transition: all .2s cubic-bezier(0.85, 0.734, 0.844, 0.8);
+        -o-transition: all .2s cubic-bezier(0.85, 0.734, 0.844, 0.8);
+        -webkit-transform: translate3d(20px, -10px, 20px) skewX(0deg);
+        -moz-transform: translate3d(20px, -10px, 20px) skewX(0deg);
+        -ms-transform: translate3d(20px, -10px, 20px) skewX(0deg);
+        -o-transform: translate3d(20px, -10px, 20px) skewX(0deg);
+    }
+    a {
+        background: lighten($color-secondary, 20);
+        padding: 1em 1em;
+        color: white;
+        i {
+            color: black;
+        }
+    }
+}

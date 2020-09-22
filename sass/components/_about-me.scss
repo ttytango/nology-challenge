@@ -1,0 +1,77 @@
+.about-me {
+    @include clearfix;
+    display: grid;
+    grid-template-areas: "sub-header sub-header" "nav content" "about-footer about-footer";
+    grid-template-rows: 80px 1fr 50px;
+    grid-template-columns: 15% 1fr;
+    gap: 0;
+    -webkit-animation-name: appearComponent;
+    animation-name: appearComponent;
+    -webkit-animation-direction: normal;
+    animation-direction: normal;
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    margin-top: 1em;
+    width: 95%;
+    margin: 1em auto 0;
+    box-shadow: 2px 1px 10px black;
+    overflow: hidden;
+    // -webkit-backface-visibility: hidden;
+    // backface-visibility: hidden;
+    .sub-header {
+        grid-area: sub-header;
+        background: linear-gradient(to bottom, rgba($color-primary-light, 0.8) 50%, rgba($color-tertiary, 0.5) 75%, rgba($color-primary-dark, 0.8));
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        background-blend-mode: saturation;
+        mix-blend-mode: luminosity;
+        border: 1px solid black;
+        justify-content: center;
+        text-align: center;
+        padding: 25px;
+        box-shadow: 1px 4px 8px $color-primary-dark;
+        h2 {
+            @include heading-font;
+        }
+    }
+    nav {
+        grid-area: nav;
+        background: linear-gradient(to bottom, rgb(128, 128, 128), rgba(12, 12, 12, 0.7));
+        border: 1px solid black;
+        // padding: 5px;
+    }
+    .content {
+        grid-area: content;
+        // max-height: 940px;
+        background: black;
+        border: 1px solid black;
+        padding: 5px;
+        .tab-pane {
+            display: none;
+            background: rgba($color-secondary, 0.5);
+            padding: 1em 1em;
+        }
+        .active {
+            display: block;
+        }
+    }
+    .about-footer {
+        font-size: 3rem;
+        grid-area: about-footer;
+        background: rgba($color-primary-light, 0.8);
+        border: 1px solid black;
+        // padding: px;
+        text-align: center;
+        i {
+            text-shadow: 1px 1px 3px black;
+            letter-spacing: 2rem;
+        }
+        @include respond(small) {
+            display: block;
+            i {
+                letter-spacing: 0rem;
+                font-size: 2.5rem;
+            }
+        }
+    }
+}
