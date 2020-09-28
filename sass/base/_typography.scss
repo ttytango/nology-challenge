@@ -33,7 +33,7 @@ body {
         }
         @include respond(small) {
             letter-spacing: 1rem;
-            font-size: 2rem;
+            font-size: 4rem;
         }
         &:active {
             text-shadow: -8px -1px 1px rgba(221, 228, 224, 0.295);
@@ -45,20 +45,11 @@ body {
             -o-transition: all .2s ease-in-out;
             cursor: default;
         }
-        // &(:hover) {
-        //     text-shadow: -12px -1px 3px rgba(221, 228, 224, 0.295);
-        //     transition: all .5s ease-in-out;
-        //     -webkit-transition: all .5s ease-in-out;
-        //     -moz-transition: all .5s ease-in-out;
-        //     -ms-transition: all .5s ease-in-out;
-        //     -o-transition: all .5s ease-in-out;
-        // }
+
     }
     &--sub {
         animation: slideInLeft 3s alternate;
         -webkit-animation: slideInLeft 3s alternate;
-        // -webkit-animation-play-state: both;
-        // animation-play-state: both;
         text-shadow: -4px 8px 1px rgba(10, 37, 22, 0.7);
         display: block;
         font-size: 2rem;
@@ -69,8 +60,8 @@ body {
             letter-spacing: 1rem;
         }
         @include respond(small) {
-            letter-spacing: 1rem;
-            font-size: 1rem;
+            letter-spacing: 0.6rem;
+            font-size: 1.2rem;
         }
         &:hover {
             filter: hue-rotate(-90deg) drop-shadow(-1px 2px 3px black);
@@ -94,15 +85,108 @@ body {
     }
 }
 
+#hello {
+    @include heading-font;
+    font-size: xx-large;
+    font-style: oblique;
+    -webkit-text-decoration: underline overline double black;
+    text-decoration: underline overline double black;
+    backface-visibility: hidden;
+    -webkit-animation: subtitleAnimate 0.9s normal;
+    animation: subtitleAnimate 0.9s normal;
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+    // margin-top: 2em;
+    -webkit-backface-visibility: hidden;
+}
+
 .content {
     h3 {
-        font-size: 1.8rem;
+        font-size: 2rem;
         color: #fff;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        transition: all .3s ease-in;
+        -webkit-transition: all .3s ease-in;
+        -moz-transition: all .3s ease-in;
+        -ms-transition: all .3s ease-in;
+        -o-transition: all .3s ease-in;
+        animation: appearComponent .5s normal;
+        -webkit-animation: appearComponent .5s normal;
+        @include respond(medium) {
+            font-size: 1.8rem;
+            padding-right: 2.4rem;
+        }
+        @include respond(small) {
+            // font-size: 1.6rem;
+            padding-right: 2.2rem;
+        }
     }
-    p {
-        font-size: 1.6rem;
+    p,
+    ul,
+    h4 {
+        padding-left: 2rem;
         color: #fff;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        transform: translateX(20px);
+        transition: all .9s ease-in;
+        -webkit-transition: all .9s ease-in;
+        -moz-transition: all .9s ease-in;
+        -ms-transition: all .9s ease-in;
+        -o-transition: all .9s ease-in;
+        animation: appearComponent .9s normal;
+        -webkit-animation: appearComponent .9s normal;
+        -webkit-transform: translateX(20px);
+        -moz-transform: translateX(20px);
+        -ms-transform: translateX(20px);
+        -o-transform: translateX(20px);
+    }
+    h4,
+    p {
+        padding-right: 2em;
+        font-size: 1.6rem;
+        transition: all .7s ease-in;
+        -webkit-transition: all .7s ease-in;
+        -moz-transition: all .7s ease-in;
+        -ms-transition: all .7s ease-in;
+        -o-transition: all .7s ease-in;
+        color: #fff;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        @include respond(medium) {
+            font-size: 1.4rem;
+            padding-right: 2.4rem;
+        }
+    }
+    ul,
+    li {
+        font-size: 1.6rem;
+        animation: slideInLeft .9s forwards;
+        -webkit-animation: slideInLeft .9s forwards;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        @include respond(small) {
+            text-indent: initial;
+        }
+    }
+}
+
+.featured {
+    .card-title {
+        font-size: 1.8rem;
+    }
+    .card-body {
+        font-size: 1.4rem;
+    }
+}
+
+.contact {
+    label {
+        font-size: 1.8rem;
+    }
+    .form-control {
+        height: 3rem;
+        font-size: 1.4rem;
+    }
+    textarea {
+        min-height: 8rem;
     }
 }

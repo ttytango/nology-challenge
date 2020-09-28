@@ -29,7 +29,7 @@
         justify-content: center;
         text-align: center;
         padding: 25px;
-        box-shadow: 1px 4px 8px $color-primary-dark;
+        box-shadow: 1px 4px 8px darken($color-primary-dark, 10);
         h2 {
             @include heading-font;
         }
@@ -42,14 +42,27 @@
     }
     .content {
         grid-area: content;
-        // max-height: 940px;
+        margin-right: 5px;
         background: black;
         border: 1px solid black;
         padding: 5px;
+        transition: all .5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        -webkit-transition: all .5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        -moz-transition: all .5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        -ms-transition: all .5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        -o-transition: all .5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
         .tab-pane {
             display: none;
-            background: rgba($color-secondary, 0.5);
+            background: rgba($color-secondary, 0.7);
             padding: 1em 1em;
+            
+            ul {
+                padding: 1.2rem;
+                text-indent: 10%;
+                list-style: inside;
+                color: white;
+                font-size: 1.4rem;
+            }
         }
         .active {
             display: block;
@@ -60,7 +73,6 @@
         grid-area: about-footer;
         background: rgba($color-primary-light, 0.8);
         border: 1px solid black;
-        // padding: px;
         text-align: center;
         i {
             text-shadow: 1px 1px 3px black;
@@ -73,5 +85,11 @@
                 font-size: 2.5rem;
             }
         }
+    }
+    @include respond(medium) {
+        display: block;
+    }
+    @include respond(small) {
+        display: block;
     }
 }

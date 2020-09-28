@@ -1,11 +1,10 @@
-// // document.getElementById("myHeader").onmousemove = function(event) { myFunction(event) };
+var myTimer = setTimeout(myTitle, 3200);
 
-// function shadowChange(event) {
-//     var x = event.clientX;
-//     // var coor = "Coordinates: (" + x + "," + y + ")";
-//     console.log(x);
+function myTitle() {
+    var greet = document.querySelector("#hello");
+    greet.style.animationPlayState = "running";
+}
 
-// }
 
 let TextShadow = (function() {
 
@@ -44,27 +43,87 @@ TextShadow.eventSpace.addEventListener('mousemove', TextShadow.shadowUpdate);
 
 TextShadow.eventSpace.addEventListener('mouseleave', TextShadow.handleMouseLeave);
 
-// CARDS
 
-var feats = [{
-        "title": "Svelte Playground!",
-        "image": "img",
-        "description": "A svelte playground prototype SPA",
-        "url": "https://www.example.com/"
-    },
-    {
-        "title": "Svelte Example App",
-        "image": "img-2",
-        "description": "Another page made using Svelte",
-        "url": "https://www.example.com/"
-    },
-    {
-        "title": "Tym's Sassy Portfolio",
-        "image": "img-3",
-        "description": "Another page designed using Sass",
-        "url": "https://www.example.com/"
+let myAnimate = (function() {
+
+    const animationSpace = document.querySelector("#animateCard");
+    const myAnimation = animationSpace.querySelector('#toAnimate');
+
+    function startAnimation(e) {
+
+        myAnimation.style.animationPlayState = "running";
+
     }
-];
+
+    function handleLeave(e) {
+        myAnimation.style.animationPlayState = "paused";
+    }
+    return {
+        animationSpace: animationSpace,
+        startAnimation: startAnimation,
+        handleLeave: handleLeave,
+    };
+
+})();
+
+myAnimate.animationSpace.addEventListener(
+    "mouseenter",
+    myAnimate.startAnimation
+);
+myAnimate.animationSpace.addEventListener("mouseleave", myAnimate.handleLeave);
+
+
+let myAnimate2 = (function() {
+    const animationSpace2 = document.querySelector("#animateCard2");
+    const myAnimation2 = animationSpace2.querySelector("#toAnimate2");
+
+    function startAnimation(e) {
+        myAnimation2.style.animationPlayState = "running";
+    }
+
+    function handleLeave(e) {
+        myAnimation2.style.animationPlayState = "paused";
+    }
+    return {
+        animationSpace2: animationSpace2,
+        startAnimation: startAnimation,
+        handleLeave: handleLeave,
+    };
+})();
+
+myAnimate2.animationSpace2.addEventListener(
+    "mouseenter",
+    myAnimate2.startAnimation
+);
+myAnimate2.animationSpace2.addEventListener("mouseleave", myAnimate2.handleLeave);
+
+
+let myAnimate3 = (function() {
+    const animationSpace3 = document.querySelector("#animateCard3");
+    const myAnimation3 = animationSpace3.querySelector("#toAnimate3");
+
+    function startAnimation(e) {
+        myAnimation3.style.animationPlayState = "running";
+    }
+
+    function handleLeave(e) {
+        myAnimation3.style.animationPlayState = "paused";
+    }
+    return {
+        animationSpace3: animationSpace3,
+        startAnimation: startAnimation,
+        handleLeave: handleLeave,
+    };
+})();
+
+myAnimate3.animationSpace3.addEventListener(
+    "mouseenter",
+    myAnimate3.startAnimation
+);
+myAnimate3.animationSpace3.addEventListener(
+    "mouseleave",
+    myAnimate3.handleLeave
+);
 
 
 // Content and Side-nav
@@ -106,7 +165,6 @@ $(".side-nav li:nth-of-type(3)").click(function() {
 });
 
 
-
 function activateTab(tab) {
     $('.side-nav a[href="#' + tab + '"]').tab('show');
 }
@@ -114,6 +172,10 @@ function activateTab(tab) {
 activateTab('a');
 
 function openPopUpBox() {
-    fullName = formName1.value + " " + formName2.value;
-    alert("Thank you for submitting your enquiry\nWe will get back to you shortly " + fullName);
+    if (FormControlInputEmail.value === "") {
+        alert("You have not supplied a contact email address, \nplease enter one in the field provided!");
+    } else {
+        fullName = formName1.value + " " + formName2.value;
+        alert("Thank you for submitting your enquiry\nWe will get back to you shortly " + fullName);
+    }
 }

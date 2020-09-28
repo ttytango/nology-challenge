@@ -1,7 +1,12 @@
 .footer {
     @include clearfix;
     margin-top: 1em;
-    padding: 5px 5px;
+    padding: 5px 15px;
     background-color: $color-tertiary;
     color: white;
+    font-size: 2rem;
+    border-top: 5px solid rgba($color-secondary, 0.6);
+    @include respond(small) {
+        font-size: 1.2rem;
+    }
 }

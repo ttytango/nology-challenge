@@ -1,6 +1,6 @@
 .contact {
     @include clearfix;
-    display: cover;
+    // display: cover;
     background: rgb(49, 55, 87);
     width: 80%;
     margin: 0 auto 1em;
@@ -32,6 +32,7 @@
         }
         @include respond(small) {
             margin-top: 2em;
+
         }
     }
 }
@@ -43,4 +44,10 @@
     color: white;
     width: 80%;
     margin: 0 auto;
+    @include respond(medium) {
+        width: 90%;
+    }
+    @include respond(small) {
+            width: 95%;
+    }
 }
