@@ -3,6 +3,7 @@
 ## How to install
 
 (This assumes you have node and npm installed on your device)
+
 1)
 Clone repository
 cd into nology-challenge directory
