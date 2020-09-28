@@ -1,18 +1,11 @@
 # nology-challenge
 
-## How to install
+## How to use this repo and view the project
 
-### Method 1
-1)
-- Clone repository onto your local device.
-
-- Open the nology-challenge folder and then open up index.html file in your browser.
-
-This method will load fastest, as it will ignore scss code, which has already been compiled in to css file, with the js script stored in the index.js file.
-
-### Method 2
-
-This method assumes you have node and npm installed on your device. It will allow you to view the sass/scss and make changes should you wish to play around with the styling.
+This method assumes you have node and npm installed on your device. 
+It will allow you to view the sass/scss and make changes should you wish to play around with the styling.
+Due to the extensive scss files, it will have a longer load time.
+Merely opening up the index.html file without running the following scripts will mean that the font-awesome icons will not appear. 
 
 
 
