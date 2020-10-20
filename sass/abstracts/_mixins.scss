@@ -33,12 +33,12 @@
 @mixin respond($breakpoint) {
     @if($breakpoint==medium) {
         @media (max-width: 900px) {
-            @content
+            @content;
         }
     }
     @if($breakpoint==small) {
         @media (max-width: 600px) {
-            @content
+            @content;
         }
     }
 }

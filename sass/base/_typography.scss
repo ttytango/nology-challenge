@@ -29,7 +29,7 @@ body {
         letter-spacing: 1.8rem;
         margin-bottom: 2rem;
         @include respond(medium) {
-            letter-spacing: 1.6;
+            letter-spacing: 1.6rem;
         }
         @include respond(small) {
             letter-spacing: 1rem;
@@ -45,7 +45,6 @@ body {
             -o-transition: all .2s ease-in-out;
             cursor: default;
         }
-
     }
     &--sub {
         animation: slideInLeft 3s alternate;
